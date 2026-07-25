@@ -12,12 +12,14 @@ def fetch_page(base_url, page):
     if page==1:
         url = "https://blog.python.org/blog/"
     print(f"Парсим страницу: {page}: {url}")
-    
+
+    # запрос 
     try: 
         response=requests.get(url, headers=headers, timeout=TIMEOUT)
         response.raise_for_status()
         data=response.text
 
+    # ловим исключения
     except HTTPError as httper:
         print(f"Ошибка HTTP: {httper}")    
     
@@ -32,6 +34,7 @@ def fetch_page(base_url, page):
     else:
         return data
 
+# извлечение информации - парсинг
 def parse_page(data):
     soup=BeautifulSoup(data, "lxml")
     articles = soup.find_all("article", class_="post-card group relative px-5 py-4")
