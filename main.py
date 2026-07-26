@@ -11,7 +11,7 @@ if __name__ == "__main__":
         if html:
             page_news=parse_page(html)
             all_news.extend(page_news)
-            time.sleep(2) # задержка, чтобы parser не забанили
+            time.sleep(2) # задержка, чтобы парсер не забанили
 
     # сохраняю информацию в CSV файл
     with open("news.csv", "w", newline='', encoding="utf-8") as f: # название, запись, кодировка. newline для того, чтобы не было лишних пустых строк в Windows
