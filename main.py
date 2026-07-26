@@ -14,8 +14,8 @@ if __name__ == "__main__":
             time.sleep(2) # задержка, чтобы parser не забанили
 
     # сохраняю информацию в CSV файл
-    with open("news.csv", "w", newline='', encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=['date', 'title', 'author', 'link'])
-        writer.writeheader()
-        writer.writerows(all_news)
+    with open("news.csv", "w", newline='', encoding="utf-8") as f: # название, запись, кодировка. newline для того, чтобы не было лишних пустых строк в Windows
+        writer = csv.DictWriter(f, fieldnames=['date', 'title', 'author', 'link']) # передаем файл и заголовки
+        writer.writeheader() # записываем заголовки
+        writer.writerows(all_news) # и остальные данные
 
