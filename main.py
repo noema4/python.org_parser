@@ -8,6 +8,7 @@ all_news=[] # собираю вместе новости с каждой стр�
 if __name__ == "__main__":
     for page in range(1,6): # буду парсить только первые 5 страниц
         html=fetch_page(base_url, page) 
+        # проверка на наличие ответа
         if html:
             page_news=parse_page(html)
             all_news.extend(page_news)
