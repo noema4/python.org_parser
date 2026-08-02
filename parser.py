@@ -47,7 +47,8 @@ def parse_page(data):
         article_title=article.find("a", class_="block").find("h3").text
         article_author=article.find("div", class_="mt-1 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-xs text-zinc-500 dark:text-zinc-400").find("a").text
         article_date=article.find("div", class_="mt-1 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-xs text-zinc-500 dark:text-zinc-400").find("time").text
-    
+
+        # формирую будущий вывод
         news_list.append({
             "title": article_title,
             "link": article_link,
