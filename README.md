@@ -10,7 +10,9 @@
     BeautifulSoup4 — для парсинга HTML.
     csv — для сохранения данных.
 
-Вот примерный вывод программы, открытый в LubreOffice: 
+Вот примерный вывод программы, открытый в LibreOffice: 
+ 
 <img width="1206" height="1041" alt="screen_rp2" src="https://github.com/user-attachments/assets/22e82405-6f8c-49ca-8301-0171f729e609" />
 <img width="1535" height="937" alt="screen_pr2" src="https://github.com/user-attachments/assets/cb2997d0-376c-4c1a-a53b-01497b0cc511" />
+ 
 Вот как то так выглядит мой первый, полностью функционирующий парсер сайта.
